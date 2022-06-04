@@ -16,8 +16,8 @@ import {GatewayProvider} from '@civic/solana-gateway-react';
 import Countdown from "react-countdown";
 import {Snackbar, Paper, LinearProgress, Chip} from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
-import {AlertState, getAtaForMint, toDate} from './utils';
-import {MintButton} from './MintButton';
+import {AlertState, getAtaForMint, toDate} from '../../../candy-machine-v2-responsive-ui/src/utils';
+import {MintButton} from '../../../candy-machine-v2-responsive-ui/src/MintButton';
 import {
     awaitTransactionSignatureConfirmation,
     CANDY_MACHINE_PROGRAM,
@@ -27,7 +27,7 @@ import {
     getCollectionPDA,
     mintOneToken,
     SetupState,
-} from "./candy-machine";
+} from "../../../candy-machine-v2-responsive-ui/src/candy-machine";
 
 const cluster = process.env.REACT_APP_SOLANA_NETWORK!.toString();
 const decimals = process.env.REACT_APP_SPL_TOKEN_TO_MINT_DECIMALS ? +process.env.REACT_APP_SPL_TOKEN_TO_MINT_DECIMALS!.toString() : 9;
